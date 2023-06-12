@@ -11,9 +11,10 @@
 # curl https://ipapi.co/languages | awk -F "," '{print $1}' | sed 's/-/_/g' | sed "s|$|.UTF8 UTF-8|"
 
 # Lo cual vamos a guardar como variable para usarlo más adelante y en automatico
-clear
+#version >>>>  2023-06-12-18-47 <<<<<
+
 idioma=$(curl https://ipapi.co/languages | awk -F "," '{print $1}' | sed 's/-/_/g' | sed "s|$|.UTF8|")
-clear
+
 echo ""
 echo "$idioma UTF-8" > /etc/locale.gen
 #echo "en_US UTF-8" > /etc/locale.gen
